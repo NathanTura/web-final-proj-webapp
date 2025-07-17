@@ -3,6 +3,8 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
+    background: radial-gradient(circle,rgba(20, 18, 36, 1) 0%, rgb(31, 31, 58) 36%, rgb(70, 71, 90) 100%);
+    background-size: cover;
     background-color: rgb(17, 24, 39);
     display: flex;
     flex-direction: column;
@@ -19,7 +21,7 @@ body{
     align-items: center;
     border-radius: 20px;
     padding: 50px;
-    background-color: rgb(20,18, 36);
+    background-color: #141224;
 
 }
 .logo{
@@ -29,7 +31,7 @@ input{
     border-radius: 5px;
     margin: 10px;
     font-size: x-large;
-    background-color: rgb(17, 24, 39);
+    background-color: #111827;
     border: none;
 }
 button{
