@@ -4,7 +4,7 @@
 }
 body{
     background: radial-gradient(circle,rgba(20, 18, 36, 1) 0%, rgb(31, 31, 58) 36%, rgb(70, 71, 90) 100%);
-    background-size: cover;
+    /* background: scroll; */
     background-color: rgb(17, 24, 39);
     display: flex;
     flex-direction: column;
@@ -28,11 +28,17 @@ body{
     
 }
 input{
+    padding: 13px 5px 13px 5px;
+    color: white;
     border-radius: 5px;
-    margin: 10px;
-    font-size: x-large;
+    margin: 20px 0px 20px 0px;
+    font-size: 16px;
     background-color: #111827;
     border: none;
+    min-width: 100px;
+    width: 300px; 
+       word-wrap: normal;
+    
 }
 button{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
