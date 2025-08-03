@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  
-<body>
-    <h2>Main page But Not done yet</h2>
-    <h1>goto <a href="./views/login.html">Login</a></h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance Manager - Login</title>
+    <link rel="stylesheet" href="/Css/index.css" />
+  </head>
+  <body>
+    <div class="main">
+      <form action="/login">
+        <h2>Finance Manager</h2>
+        <h3>Log in</h3>
+
+        <div class="input-group">
+          <label for="emailtxt">Email Address</label>
+          <input type="email" placeholder="Enter your email" id="emailtxt" required />
+        </div>
+
+        <div class="input-group">
+          <label for="passwordtxt">Password</label>
+          <input type="password" placeholder="Enter your password" id="passwordtxt" required />
+        </div>
+
+        <div class="option-group">
+          <label class="remember-label">
+            <input type="checkbox" name="remember" /> Remember me
+          </label>
+          <a href="#">Forgot password?</a>
+        </div>
+        
+        <div class="button-group">
+          <input type="submit" value="SIGN IN" />
+        </div>
+      </form>
+    </div>
+  </body>
 </html>

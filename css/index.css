@@ -1,0 +1,128 @@
+
+body {
+  background-color: #1a1a2e; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #e0e0e0;
+}
+
+
+.main {
+  background-color: #16213e; 
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+
+h2, h3 {
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 35px;
+  color: #a9b3c6; 
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: normal;
+  color: #a9b3c6;
+  font-size: 14px;
+}
+
+input[type='email'],
+input[type='password'] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #1f4068; 
+  border-radius: 6px;
+  box-sizing: border-box;
+  background-color: #0f3460; 
+  color: #ffffff; 
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type='email']:focus,
+input[type='password']:focus {
+  outline: none;
+  border-color: #00b894; 
+  box-shadow: 0 0 5px rgba(0, 184, 148, 0.5);
+}
+
+
+.option-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 14px;
+  color: #a9b3c6;
+}
+
+.option-group .remember-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer; 
+}
+
+.option-group input[type='checkbox'] {
+  margin-right: 8px;
+  accent-color: #00b894; 
+  cursor: pointer;
+}
+
+.option-group a {
+  color: #a9b3c6;
+  text-decoration: none;
+}
+
+.option-group a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+
+.button-group {
+  margin-top: 20px;
+}
+
+input[type='submit'] {
+  width: 100%;
+  padding: 12px;
+  background-color: #00b894;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+input[type='submit']:hover {
+  background-color: #00a383; 
+}
