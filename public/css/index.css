@@ -24,7 +24,7 @@ body {
 
 .main:hover{
   transform: scale(1.04);
-  transition: transform .3s ease;
+  transition: transform .5s ease;
 }
 
 h2,
@@ -138,6 +138,8 @@ input[type='submit']:active{
 }
 
 input[type='submit']:hover {
+  transform:translateY(2px);
+  transition: transform .3s ease;
   background-color: #00a383;
 }
 
@@ -154,24 +156,32 @@ input[type='submit']:hover {
   width: 33%;
 }
 
-.google-group {
+.link-group {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-top: 10px;
 }
 
-input[type='button']{
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
+.link-group a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
 
+.link-group p {
+
+  visibility: hidden;
+  opacity: 0;
+}
+
+.link-group:hover p{
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease, visibility 0.5s ease;
 }
 
 .signin-group{
-  margin-top: 20px;
+  clear: both;
   text-align: center;
 }
 
