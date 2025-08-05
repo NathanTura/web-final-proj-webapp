@@ -1,6 +1,5 @@
-
 body {
-  background-color: #1a1a2e; 
+  background-color: #1a1a2e;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +11,7 @@ body {
 
 
 .main {
-  background-color: #16213e; 
+  background-color: #16213e;
   padding: 40px 30px;
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
@@ -22,7 +21,8 @@ body {
 }
 
 
-h2, h3 {
+h2,
+h3 {
   text-align: center;
   margin: 0;
 }
@@ -37,7 +37,7 @@ h3 {
   font-size: 22px;
   font-weight: normal;
   margin-bottom: 35px;
-  color: #a9b3c6; 
+  color: #a9b3c6;
 }
 
 .input-group {
@@ -58,6 +58,7 @@ input[type='password'] {
   padding: 12px;
   border: 1px solid #464663;
   border-radius: 6px;
+  color: white;
   box-sizing: border-box;
   background-color: #1a1a2e;
   font-size: 16px;
@@ -67,7 +68,7 @@ input[type='password'] {
 input[type='email']:focus,
 input[type='password']:focus {
   outline: none;
-  border-color: #00b894; 
+  border-color: #00b894;
   box-shadow: 0 0 5px rgba(0, 184, 148, 0.5);
 }
 
@@ -83,12 +84,12 @@ input[type='password']:focus {
 .option-group .remember-label {
   display: flex;
   align-items: center;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .option-group input[type='checkbox'] {
   margin-right: 8px;
-  accent-color: #00b894; 
+  accent-color: #00b894;
   cursor: pointer;
 }
 
@@ -121,22 +122,56 @@ input[type='submit'] {
   text-transform: uppercase;
 }
 
-input[type='submit']:hover {
-  background-color: #00a383; 
+input[type='submit']:active{
+  background-color: aqua;
 }
 
-.separeter-group{
+input[type='submit']:hover {
+  background-color: #00a383;
+}
+
+.separeter-group {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: auto;
   margin-top: 20px;
 }
-.separeter-group hr{
+
+.separeter-group hr {
   margin: 10px;
-  width: 33%; 
+  width: 33%;
 }
 
-.option-group {
-  
+.google-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+input[type='button']{
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.signin-group{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.signin-group a {
+  text-decoration: none;
+  color: #00b894;
+}
+
+.signin-group a:hover{
+  color: #00a383;
+}
+
+.signin-group a:active{
+  color: aqua;
 }
