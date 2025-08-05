@@ -129,11 +129,14 @@ input[type='submit']:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
- 
+  margin: auto;
+  margin-top: 20px;
 }
-
-
 .separeter-group hr{
   margin: 10px;
   width: 33%; 
+}
+
+.option-group {
+  
 }
