@@ -141,6 +141,7 @@ input[type='submit']:hover {
   transform:translateY(2px);
   transition: transform .3s ease;
   background-color: #00a383;
+  color: whitesmoke;
 }
 
 .separeter-group {
@@ -157,10 +158,13 @@ input[type='submit']:hover {
 }
 
 .link-group {
+
   display: flex;
   justify-content: space-evenly;
   margin-top: 10px;
 }
+
+
 
 .link-group a {
   text-decoration: none;
@@ -169,7 +173,6 @@ input[type='submit']:hover {
 }
 
 .link-group p {
-
   visibility: hidden;
   opacity: 0;
 }
