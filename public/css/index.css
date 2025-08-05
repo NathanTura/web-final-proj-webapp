@@ -7,7 +7,7 @@ body {
   height: 100vh;
   margin: 0;
   font-family: Arial, sans-serif;
-  color: #e0e0e0;
+  color: white;
 }
 
 
@@ -17,19 +17,18 @@ body {
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   width: 90%;
-  max-width: 400px;
+  max-width: 500px;
   box-sizing: border-box;
 }
 
 
 h2, h3 {
   text-align: center;
-
   margin: 0;
 }
 
 h2 {
-    color: #00b894;
+  color: #00b894;
   font-size: 28px;
   margin-bottom: 10px;
 }
@@ -49,7 +48,7 @@ label {
   display: block;
   margin-bottom: 8px;
   font-weight: normal;
-  color: #a9b3c6;
+
   font-size: 14px;
 }
 
@@ -57,11 +56,10 @@ input[type='email'],
 input[type='password'] {
   width: 100%;
   padding: 12px;
-  border: 1px solid #1f4068; 
+  border: 1px solid #464663;
   border-radius: 6px;
   box-sizing: border-box;
-  background-color: #0f3460; 
-  color: #ffffff; 
+  background-color: #1a1a2e;
   font-size: 16px;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
@@ -77,10 +75,9 @@ input[type='password']:focus {
 .option-group {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 25px;
   font-size: 14px;
-  color: #a9b3c6;
+
 }
 
 .option-group .remember-label {
@@ -126,4 +123,17 @@ input[type='submit'] {
 
 input[type='submit']:hover {
   background-color: #00a383; 
+}
+
+.separeter-group{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+
+.separeter-group hr{
+  margin: 10px;
+  width: 33%; 
 }

@@ -4,7 +4,6 @@
 }
 body{
     background: radial-gradient(circle,rgba(20, 18, 36, 1) 0%, rgb(31, 31, 58) 36%, rgb(70, 71, 90) 100%);
-    /* background: scroll; */
     background-color: rgb(17, 24, 39);
     display: flex;
     flex-direction: column;
