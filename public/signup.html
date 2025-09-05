@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leadger pro - Login</title>
+    <title>Leadger pro - Sign up</title>
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <div class="main">
-      <form action="/login">
+      <form action="sign_up.php" method="POST">
         <h2>Ledger <l> pro </l></h2>
-        <h3>Log in</h3>
+        <h3>Sign Up</h3>
 
         <div class="input-group">
-          <label for="emailtxt">Email Address</label>
+          <label for="username">Username</label>
           <input
             type="email"
-            placeholder="Enter your email"
-            id="emailtxt"
+            placeholder="Enter your username"
+            id="username"
             required
           />
         </div>
@@ -31,21 +31,25 @@
             required
           />
         </div>
-
-        <div class="option-group">
-          <label class="remember-label">
-            <input type="checkbox" name="remember" /> Remember me
-          </label>
-          <a href="#">Forgot password?</a>
+          <div class="input-group">
+          <label for="passwordtxt">Confirm Password</label>
+          <input
+            type="password"
+            placeholder="Confirm your password"
+            id="passwordtxt"
+            required
+          />
         </div>
 
+       
+
         <div class="button-group">
-          <input type="submit" value="SIGN IN" />
+          <input type="submit" value="signup" />
         </div>
 
         <div class="separeter-group">
           <hr />
-          <p>or sign in with</p>
+          <p>or sign up with</p>
           <hr />
         </div>
 
@@ -55,11 +59,12 @@
           <a href="#"><div class="facebook"><img src="assets/facebooklogo.png" alt="facebook"><p>Facebook</p></div></a> -->
         </div>
 
-        <div class="signin-group">
+        <div class="signup-group">
           <label for="sign-up">
-            Dont have an account? <a href="signup.html">Sign up</a></label>
+            Do you have an account? <a href="index.html">Sign in</a></label>
         </div>
       </form>
     </div>
+    
   </body>
 </html>

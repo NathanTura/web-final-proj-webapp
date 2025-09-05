@@ -22,10 +22,10 @@ body {
   transition: -color 0.3s ease;
 }
 
-.main:hover{
+/* .main:hover{
   transform: scale(1.04);
   transition: transform .5s ease;
-}
+} */
 
 h2,
 h3 {
