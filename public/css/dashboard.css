@@ -91,13 +91,7 @@
     transition: transform 0.3s ease;
 }
 
-.sidepanel li img,
-.mobilepanel li img {
-    width: 30px;
-    height: 30px;
-    display: block;
-    margin: 0 auto;
-}
+
 
 .dashboard {
     display: none;
