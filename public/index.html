@@ -1,57 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ledger Pro</title>
-    <link rel="stylesheet" href="css/index.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/transaction.css">
+</head>
 
-    
- 
+<body>
     <div class="main">
-      <div class="sidepanel" id="sidepanel"> 
-        <h3>Finance Manager</h3>
-        <ul>
-          <li class="active">Dashboard </li>
-          <li>Transactions </li>
-          <li>My Goals</li>
-          <li>Leaderboard</li>
-        </ul>
-      </div>
-      <div class="dashboard">
-   
-        <div class="section1">
-          <h3>Welcome back, <span>User</span></h3>
-          <input type="button" value="Add Transaction" name="addTransaction" />
+        <div class="sidepanel" id="sidepanel">
+            <h3>Finance Manager</h3>
+            <ul>
+                <li class="active">Dashboard</li>
+                <li>Transactions</li>
+                <li>My Goals</li>
+                <li>Leaderboard</li>
+            </ul>
         </div>
-        <div class="section2">
-          <div class="totalI">Income</div>
-          <div class="totalE">Expense</div>
-          <div class="totalB">balance</div>
-        </div>
-        <div class="section3">
-          <div class="graph"></div>
-          <div class="recents"></div>
-        </div>
-      </div>
 
-      <div class="mobilepanel" id = "mobilepanel">
-        <ul>
-          <li class="active"><img src="assets/dashboard.png"></li>
-          <li><img src="assets/transaction.png"></li>
-          <li class="addT">+</li>
-          <li><img src="assets/goal.png"></li>
-          <li><img src="assets/leaderboard.png"></li>
-        </ul>
-      </div>
-      
+        <div class="dashboard" id="dashboard">
+            <div class="section1">
+                <h3>Welcome back, <span>User</span></h3>
+                <input type="button" value="Add Transaction" name="addTransaction" />
+            </div>
+            <div class="section2">
+                <div class="totalI">Income</div>
+                <div class="totalE">Expense</div>
+                <div class="totalB">balance</div>
+            </div>
+            <div class="section3">
+                <div class="graph"></div>
+                <div class="recents"></div>
+            </div>
+        </div>
+        <div class="transactions" id="transactions">
+            <div class="reminder">
+                <h3>Set Reminder</h3>
+                <form action="" method="">
+                    <input type="text" name="name" id="name" placeholder="Rent or bills">
+                    <input type="number" name="amount" id="amount" placeholder="Amount">
+                    <input type="button" name="setreminder" id="setreminder" value="Set Reminder">
+                </form>
+            </div>
+            <div class="history">
+                <p>No history yet. Add some reminders!</p>
+            </div>
+        </div>
+
+
+        <div class="mobilepanel" id="mobilepanel">
+            <ul>
+                <li class="active"><img src="assets/dashboard.png" /></li>
+                <li><img src="assets/transaction.png" /></li>
+                <li class="addT">+</li>
+                <li><img src="assets/goal.png" /></li>
+                <li><img src="assets/leaderboard.png" /></li>
+            </ul>
+        </div>
     </div>
+</body>
 
-  </body>
 </html>
-
 
 <script src="js/index.js"></script>
 
+<script src="js/panelswitch.js"></script>

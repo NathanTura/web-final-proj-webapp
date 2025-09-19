@@ -43,9 +43,8 @@ body {
     transition: all 0.3s ease;
     font-size: 1rem;
     display: flex;
-    
-}
 
+}
 
 
 .sidepanel li.active {
@@ -57,113 +56,9 @@ body {
     transform: translateX(5px);
 }
 
-
-.dashboard {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 3vh;
-    padding: 30px;
-    background: #111827;
-    overflow-y: auto;
-    transition: all 0.3s ease;
-}
-
-.section1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.section1 h3 {
-    font-size: 1.4rem;
-    color: #f9fafb;
-    font-weight: 500;
-}
-
-.section1 span {
-    color: #27ae60;
-    font-weight: bold;
-}
-
-.section1 input[type="button"] {
-    padding: 12px 20px;
-    background: #2ecc71;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #fff;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.section1 input[type="button"]:hover {
-    background: #27ae60;
-    transform: scale(1.05);
-}
-
-.section2 {
-    display: flex;
-    justify-content: space-between;
-    min-height: 200px;
-    height: 25%;
-    gap: 20px;
-}
-
-.totalB,
-.totalI,
-.totalE {
-    flex: 1;
-    background-color: #1f2937;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
-}
-
-.section3 {
-    display: flex;
-    justify-content: space-between;
-    min-height: 400px;
-    height: 54%;
-    gap: 20px;
-}
-
-.graph,
-.recents {
-    border-radius: 12px;
-    background-color: #1f2937;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
-    padding: 20px;
-}
-
-.graph {
-    width: 60%;
-}
-
-.recents {
-    width: 38%;
-}
-
-
-.mobilepanel {
-    display: none;
-    transition: transform 0.3s ease;
-}
-
-.sidepanel li img,
-.mobilepanel li img {
-    width: 30px;
-    height: 30px;
-    display: block;
-    margin: 0 auto;
-}
-
-
 @media (max-width: 769px) {
-    .main {
-        display: block;
-    }
+
+
 
     .sidepanel {
         display: block;
@@ -180,48 +75,6 @@ body {
     .sidepanel.show {
         transform: translateX(0);
         opacity: 1;
-    }
-
-    .dashboard {
-        gap: 10px;
-    }
-
-    .section1 input[type="button"] {
-        display: none;
-    }
-
-    .section2 {
-        flex-wrap: wrap-reverse;
-        gap: 10px;
-    }
-
-    .totalB,
-    .totalI,
-    .totalE {
-        min-width: 25%;
-    }
-
-
-    .section3 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: fit-content;
-        gap: 10px;
-        height: auto;
-    }
-
-    .graph {
-        height: 30vh;
-        width: 100%;
-        padding: 0;
-    }
-
-    .recents {
-        height: 30vh;
-        width: 100%;
-        padding: 0;
-
     }
 
     .mobilepanel {
@@ -292,11 +145,5 @@ body {
         height: 50px;
         margin-top: -35px;
         font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 364px) {
-    .section2 {
-        min-height: 300px;
     }
 }
