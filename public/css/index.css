@@ -10,7 +10,7 @@ body {
     height: 100vh;
 }
 
-
+/* ========== SIDE PANEL ========== */
 .sidepanel {
     width: 20%;
     max-width: 220px;
@@ -19,8 +19,9 @@ body {
     display: flex;
     flex-direction: column;
     padding: 30px 20px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
 .sidepanel h3 {
     font-size: 1.4rem;
     margin-bottom: 50px;
@@ -52,6 +53,7 @@ body {
     transform: translateX(5px);
 }
 
+/* ========== DASHBOARD ========== */
 .dashboard {
     flex: 1;
     display: flex;
@@ -60,7 +62,7 @@ body {
     padding: 30px;
     background: #111827;
     overflow-y: auto;
-     transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .section1 {
@@ -142,17 +144,29 @@ body {
 
 .mobilepanel {
     display: none;
-    transition: all .3s ease;
+    transition: transform 0.3s ease;
 }
 
 @media (max-width: 769px) {
-
     .main {
         display: block;
     }
 
     .sidepanel {
-        display: none;
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        transform: translateX(-100%);
+        opacity: 0;
+        z-index: 200;
+    }
+
+    .sidepanel.show {
+        transform: translateX(0);
+        opacity: 1;
     }
 
     .dashboard {
@@ -165,30 +179,30 @@ body {
 
     .section2 {
         flex-wrap: wrap-reverse;
-
         gap: 10px;
     }
 
     .section3 {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        min-height: fit-content;
         gap: 10px;
+        height: auto;
     }
 
     .graph {
-        margin: 0;
-        padding: 0;
-        width: 100%;
         height: 30vh;
+        width: 100%;
+        padding: 0;
     }
 
     .recents {
-        margin: 0;
-        padding: 0;
+        height: 30vh;
         width: 100%;
-        height: 20vh;
+        padding: 0;
+        margin-bottom: 40px;
     }
-
 
     .mobilepanel {
         display: block;
@@ -199,8 +213,12 @@ body {
         padding: 10px 0;
         background-color: #1f2937;
         box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
-        z-index: 100;
+        z-index: 300;
         transform: translateY(200%);
+    }
+
+    .mobilepanel.show {
+        transform: translateY(0);
     }
 
     .mobilepanel ul {
@@ -223,7 +241,6 @@ body {
         text-overflow: ellipsis;
     }
 
-
     .mobilepanel .addT {
         background-color: #27ae60;
         font-size: 1.5rem;
@@ -241,8 +258,8 @@ body {
     }
 }
 
-@media (max-width: 500px) {
 
+@media (max-width: 500px) {
     .mobilepanel li {
         font-size: 0.9rem;
         padding: 6px 2px;
