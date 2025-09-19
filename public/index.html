@@ -3,63 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leadger pro - Login</title>
+    <title>Ledger Pro</title>
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
+
+    
+ 
     <div class="main">
-      <form action="/login">
-        <h2>Ledger <l> pro </l></h2>
-        <h3>Log in</h3>
-
-        <div class="input-group">
-          <label for="emailtxt">Email Address</label>
-          <input
-            type="email"
-            placeholder="Enter your email"
-            id="emailtxt"
-            required
-          />
+      <div class="sidepanel" id="sidepanel"> 
+        <h3>Finance Manager</h3>
+        <ul>
+          <li class="active">Dashboard</li>
+          <li>Transactions</li>
+          <li>My Goals</li>
+          <li>Leaderboard</li>
+        </ul>
+      </div>
+      <div class="dashboard">
+        <div class="section1">
+          <h3>Welcome back, <span>User</span></h3>
+          <input type="button" value="Add Transaction" name="addTransaction" />
         </div>
-
-        <div class="input-group">
-          <label for="passwordtxt">Password</label>
-          <input
-            type="password"
-            placeholder="Enter your password"
-            id="passwordtxt"
-            required
-          />
+        <div class="section2">
+          <div class="totalI">Income</div>
+          <div class="totalE">Expense</div>
+          <div class="totalB">balance</div>
         </div>
-
-        <div class="option-group">
-          <label class="remember-label">
-            <input type="checkbox" name="remember" /> Remember me
-          </label>
-          <a href="#">Forgot password?</a>
+        <div class="section3">
+          <div class="graph"></div>
+          <div class="recents"></div>
         </div>
+      </div>
 
-        <div class="button-group">
-          <input type="submit" value="SIGN IN" />
-        </div>
-
-        <div class="separeter-group">
-          <hr />
-          <p>or sign in with</p>
-          <hr />
-        </div>
-
-        <div class="link-group">
-          <a href="#"><div class="google"><img src="assets/googlelogo.png" alt="google"><p>Google</p></div></a>
-          <a href="#"><div class="yahoo"><img src="assets/yahoologo.png" alt="yahoo"><p>Yahoo</p></div></a>
-          <a href="#"><div class="facebook"><img src="assets/facebooklogo.png" alt="facebook"><p>Facebook</p></div></a>
-        </div>
-
-        <div class="signin-group">
-          <label for="sign-up">
-            Dont have an account? <a href="#">Sign up</a></label>
-        </div>
-      </form>
+      <div class="mobilepanel" id = "mobilepanel">
+        <ul>
+          <li class="active">Dashboard</li>
+          <li>Transactions</li>
+          <li class="addT">+</li>
+          <li>My Goals</li>
+          <li>Leaderboard</li>
+        </ul>
+      </div>
+      
     </div>
+
   </body>
 </html>
+
+
+<script src="js/index.js"></script>
+
