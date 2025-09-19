@@ -46,10 +46,21 @@
 .section2 {
     display: flex;
     justify-content: space-between;
-    min-height: 150px;
     height: fit-content;
+    text-align: center;
     gap: 20px;
 }
+
+
+.section2 h4 {
+    font-size: large;
+    color: #2ecc71;
+}
+
+.section2 p {
+    font-weight: bold;
+}
+
 
 .totalB,
 .totalI,
@@ -57,7 +68,6 @@
     flex: 1;
     background-color: #1f2937;
     border-radius: 12px;
-
     padding: 20px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
