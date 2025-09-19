@@ -10,6 +10,7 @@ body {
     height: 100vh;
 }
 
+<<<<<<< HEAD
 .sidepanel {
     width: 20%;
     max-width: 220px;
@@ -20,6 +21,12 @@ body {
     padding: 30px 20px;
     transition: all 0.3s ease;
 }
+=======
+/* .main:hover{
+  transform: scale(1.04);
+  transition: transform .5s ease;
+} */
+>>>>>>> a47f558071be9b85f006f3876f2e847a040b069b
 
 .sidepanel h3 {
     font-size: 1.4rem;
