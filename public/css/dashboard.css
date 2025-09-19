@@ -46,8 +46,8 @@
 .section2 {
     display: flex;
     justify-content: space-between;
-    min-height: 200px;
-    height: 25%;
+    min-height: 150px;
+    height: fit-content;
     gap: 20px;
 }
 
@@ -57,6 +57,7 @@
     flex: 1;
     background-color: #1f2937;
     border-radius: 12px;
+
     padding: 20px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
@@ -78,10 +79,14 @@
 }
 
 .graph {
+        height: fit-content;
+    min-height: 300px;
     width: 60%;
 }
 
 .recents {
+    height: fit-content;
+    min-height: 300px;
     width: 38%;
 }
 
@@ -132,15 +137,18 @@
     }
 
     .graph {
-        height: 30vh;
+        height: fit-content;
+        min-height: 200px;
         width: 100%;
         padding: 0;
     }
 
     .recents {
-        height: 30vh;
+        height: fit-content;
+        min-height: 200px;
         width: 100%;
         padding: 0;
+        margin-bottom: 100px;
 
     }
 
