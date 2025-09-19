@@ -1,9 +1,16 @@
+
+document.addEventListener('DOMContentLoaded', () => {
+    updatesideplnels();
+})
 window.addEventListener('resize', () => {
+    updatesideplnels();
+});
+
+
+function updatesideplnels() {
     if (window.innerWidth <= 769) {
 
-            var sidemenu = document.getElementById('sidepanel')
-
-          setTimeout(() => {
+        setTimeout(() => {
             var mobilemenu = document.getElementById('mobilepanel')
             var sidemenu = document.getElementById('sidepanel')
 
@@ -11,13 +18,13 @@ window.addEventListener('resize', () => {
             sidemenu.style.transform = 'translateX(-100%)';
         }, 3);
     }
-    else{
-            setTimeout(() => {
+    else {
+        setTimeout(() => {
             var mobilemenu = document.getElementById('mobilepanel')
             var sidemenu = document.getElementById('sidepanel')
             mobilemenu.style.transform = 'translateY(200%)';
             sidemenu.style.transform = 'translateX(0)';
-           
+
         }, 3);
     }
-});
+}
