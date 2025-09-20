@@ -3,10 +3,12 @@
     display: flex;
     flex-direction: column;
     gap: 3vh;
+    
     padding: 30px;
     background: #111827;
     overflow-y: auto;
     transition: all 0.3s ease;
+   
 }
 
 .section1 {
@@ -105,13 +107,6 @@
     display: none;
     transition: transform 0.3s ease;
 }
-
-
-
-.dashboard {
-    display: none;
-}
-
 
 
 

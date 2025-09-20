@@ -1,0 +1,197 @@
+.Goals {
+    width: 100%;
+
+}
+
+.Goals h3 {
+    padding: 20px;
+}
+
+.goal-overview {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.totalp {
+    background-color: rgb(38, 77, 150);
+}
+
+.compp {
+    background-color: rgb(22, 129, 22);
+}
+
+.activep {
+    background-color: rgb(129, 79, 22);
+}
+
+.goal-overview div {
+    width: fit-content;
+    height: fit-content;
+    min-width: 30%;
+
+    border-radius: 10px;
+    text-align: center;
+}
+
+.goal-overview p {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.current-goal-proggress {
+    margin: 20px;
+}
+
+
+progress {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    min-width: 350px;
+    height: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #2b3948;
+    border: none;
+}
+
+progress::-webkit-progress-bar {
+    background: #2b3948;
+}
+
+progress::-webkit-progress-value {
+    background: #27ae60;
+    border-radius: 8px;
+}
+
+progress::-moz-progress-bar {
+    background: #27ae60;
+}
+
+#goalPercent {
+    margin-left: 8px;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+.Progresses div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.Progresses div input[type="button"] {
+    background-color: #27ae60;
+    color: white;
+    font-size: small;
+    font-weight: bold;
+    border: solid 0;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+}
+
+.add-goals {
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    width: 45%;
+    background-color: #1f2937;
+
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+}
+
+.input input[type="text"] {
+    margin-top: 2%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #8e9aaa;
+    color: white;
+    background-color: #53647a;
+}
+
+.button-group {
+    display: flex;
+    margin: 20px 10px;
+    justify-content: center;
+}
+
+.button-group input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(38, 77, 150);
+    outline: none;
+    border: 0;
+    font-size: medium;
+    color: aliceblue;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+@media (max-width:769px) {
+    body {
+        padding-bottom: 230px;
+    }
+
+    .goal-overview {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0px 20px;
+    }
+
+    .goal-overview div {
+        line-height: 0%;
+        margin: auto;
+        height: 10vh;
+        width: 100%;
+    }
+
+    .Goals h3 {
+        font-size: 1rem;
+    }
+
+    .goal-overview h4 {
+        font-size: 1rem;
+    }
+
+    .goal-overview p {
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .add-goals {
+        width: 100%;
+        padding: 0;
+    }
+
+    .add-goals {
+        padding: 10px;
+        width: 45%;
+        min-width: 250px;
+    }
+
+    .Progresses div {
+        display: flex;
+        align-items: self-start;
+        flex-direction: column;
+    }
+
+    #goalPercent {
+        display: none;
+
+    }
+}

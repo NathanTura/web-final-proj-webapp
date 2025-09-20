@@ -1,69 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ledger Pro</title>
     <link rel="stylesheet" href="css/dashboard.css" />
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/transaction.css">
-</head>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/transaction.css" />
+    <link rel="stylesheet" href="css/goals.css" />
+  </head>
 
-<body>
+  <body>
     <div class="main">
-        <div class="sidepanel" id="sidepanel">
-            <h3>Finance Manager</h3>
-            <ul>
-                <li class="active">Dashboard</li>
-                <li>Transactions</li>
-                <li>My Goals</li>
-                <li>Leaderboard</li>
-            </ul>
-        </div>
+      <div class="sidepanel" id="sidepanel">
+        <h3>Finance Manager</h3>
+        <ul>
+          <li class="active">Dashboard</li>
+          <li>Reminders</li>
+          <li>My Goals</li>
+          <li>Leaderboard</li>
+        </ul>
+      </div>
 
-        <div class="dashboard" id="dashboard">
-            <div class="section1">
-                <h3>Welcome back, <span>User</span></h3>
-                <input type="button" value="Add Transaction" name="addTransaction" />
-            </div>
-            <div class="section2">
-                <div class="totalI"><h4>Income</h4> <p class="Income" id="Income">10000 Birr</p></div>
-                <div class="totalE"> <h4>Expense</h4> <p class="Expense" id="Expense">10000 Birr</p></div>
-                <div class="totalB"><h4>Balance</h4> <p class="Balance" id="Balance">10000 Birr</p></div>
-            </div>
-            <div class="section3">
-                <div class="graph"></div>
-                <div class="recents"></div>
-            </div>
+      <div class="dashboard" id="dashboard">
+        <div class="section1">
+          <h3>Welcome back, <span>User</span></h3>
+          <input type="button" value="Add Transaction" name="addTransaction" />
         </div>
-        <div class="transactions" id="transactions">
-            <div class="reminder">
-                <h3>Set Reminder</h3>
-                <form action="" method="">
-                    <input type="text" name="name" id="name" placeholder="Rent or bills">
-                    <input type="number" name="amount" id="amount" placeholder="Amount">
-                    <input type="button" name="setreminder" id="setreminder" value="Set Reminder">
-                </form>
-            </div>
-            <div class="history">
-                <p>No history yet. Add some reminders!</p>
-            </div>
+        <div class="section2">
+          <div class="totalI">
+            <h4>Income</h4>
+            <p class="Income" id="Income">10000 Birr</p>
+          </div>
+          <div class="totalE">
+            <h4>Expense</h4>
+            <p class="Expense" id="Expense">10000 Birr</p>
+          </div>
+          <div class="totalB">
+            <h4>Balance</h4>
+            <p class="Balance" id="Balance">10000 Birr</p>
+          </div>
         </div>
+        <div class="section3">
+          <div class="graph"></div>
+          <div class="recents"></div>
+        </div>
+      </div>
+      <div class="Reminders" id="Reminders">
+        <div class="reminder">
+          <h3>Set Reminder</h3>
+          <form action="" method="">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Rent or bills"
+            />
+            <input
+              type="number"
+              name="amount"
+              id="amount"
+              placeholder="Amount"
+            />
+            <input
+              type="button"
+              name="setreminder"
+              id="setreminder"
+              value="Set Reminder"
+            />
+          </form>
+        </div>
+        <div class="history">
+          <p>No history yet. Add some reminders!</p>
+        </div>
+      </div>
 
-
-        <div class="mobilepanel" id="mobilepanel">
-            <ul>
-                <li class="active"><img src="assets/dashboard.png" /></li>
-                <li><img src="assets/transaction.png" /></li>
-                <li class="addT">+</li>
-                <li><img src="assets/goal.png" /></li>
-                <li><img src="assets/leaderboard.png" /></li>
-            </ul>
+      <div class="Goals" id="Goals">
+        <h3>Goals Overview</h3>
+        <div class="goal-overview">
+          <div class="totalp">
+            <h4>Total points</h4>
+            <p>100000</p>
+          </div>
+          <div class="compp">
+            <h4>Completed Goals</h4>
+            <p>20</p>
+          </div>
+          <div class="activep">
+            <h4>Active Goals</h4>
+            <p>2</p>
+          </div>
         </div>
+        <h3>Current Goal Progresses</h3>
+        <div class="current-goal-proggress">
+          <div class="Progresses">
+            <h4>Name of progress</h4>
+            <div>
+              <progress id="goalProgress" max="100" value="10"></progress>
+              <span id="goalPercent">10%</span>
+
+              <input
+                type="button"
+                name="contribute"
+                id="contribute"
+                value="Contribute"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="add-goals">
+          <form action="">
+            <div class="input">
+              <label for="goalname">Goal name</label>
+              <input type="text" name="goalname" placeholder="eg.; car" />
+            </div>
+            <div class="input">
+              <label for="targetamount">Target Amount</label>
+              <input
+                type="text"
+                name="targetamount"
+                id=""
+                placeholder="eg.; 100000"
+              />
+            </div>
+            <div class="button-group">
+              <input
+                type="button"
+                name="createdeadline"
+                id=""
+                value="Generate deadline option"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="mobilepanel" id="mobilepanel">
+        <ul>
+          <li class="active"><img src="assets/dashboard.png" /></li>
+          <li><img src="assets/transaction.png" /></li>
+          <li class="addT">+</li>
+          <li><img src="assets/goal.png" /></li>
+          <li><img src="assets/leaderboard.png" /></li>
+        </ul>
+      </div>
     </div>
-</body>
-
+  </body>
 </html>
 
 <script src="js/index.js"></script>

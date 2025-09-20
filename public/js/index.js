@@ -28,3 +28,19 @@ function updatesideplnels() {
         }, 3);
     }
 }
+function adjustPadding() {
+  const panel = document.getElementById("mobilepanel");
+  if (panel) {
+    if (window.innerWidth < 769) {
+      document.body.style.paddingBottom = (panel.offsetHeight + 150) + "px";
+    } else {
+      document.body.style.paddingBottom = "0px";
+    }
+  }
+}
+
+window.addEventListener("load", adjustPadding);
+window.addEventListener("resize", adjustPadding);
+
+const observer = new ResizeObserver(() => adjustPadding());
+observer.observe(document.body);
