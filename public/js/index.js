@@ -28,19 +28,16 @@ function updatesideplnels() {
         }, 3);
     }
 }
-function adjustPadding() {
-  const panel = document.getElementById("mobilepanel");
-  if (panel) {
-    if (window.innerWidth < 769) {
-      document.body.style.paddingBottom = (panel.offsetHeight + 150) + "px";
-    } else {
-      document.body.style.paddingBottom = "0px";
-    }
+
+
+function updateReminderButton() {
+  const button = document.getElementById("contribute");
+  if (window.innerWidth <= 769) {
+    button.value = "+";
+  } else {
+    button.value = "Set Reminder";
   }
 }
 
-window.addEventListener("load", adjustPadding);
-window.addEventListener("resize", adjustPadding);
-
-const observer = new ResizeObserver(() => adjustPadding());
-observer.observe(document.body);
+window.addEventListener("load", updateReminderButton);
+window.addEventListener("resize", updateReminderButton);

@@ -1,15 +1,18 @@
-var dashboard, Reminders, Goals;
+var dashboard, Reminders, Goals, transactions, leaderboards;
 
 document.addEventListener('DOMContentLoaded', () => {
     dashboard = document.getElementById('dashboard')
     Reminders = document.getElementById('Reminders')
+    transactions = document.getElementById('transactions')
     Goals = document.getElementById('Goals')
+    leaderboards = document.getElementById('leaderboards')
     hideAll();
 })
 
 function hideAll() {
     dashboard.style.display = 'flex'
     Reminders.style.display = 'none'
+    leaderboards.style.display = 'none'
     Goals.style.display = 'none'
 }
 
@@ -32,16 +35,25 @@ mobileItems.forEach((item, index) => {
         if (index === 0) {
             dashboard.style.display = 'flex';
             Reminders.style.display = 'none';
+            leaderboards.style.display = 'none';
             Goals.style.display = 'none';
         } else if (index === 1) {
             dashboard.style.display = 'none';
             Reminders.style.display = 'flex';
+            leaderboards.style.display = 'none';
             Goals.style.display = 'none';
         }
         else if (index === 3) {
             dashboard.style.display = 'none';
             Reminders.style.display = 'none';
+            leaderboards.style.display = 'none';
             Goals.style.display = 'block';
+        }
+        else if (index === 4) {
+            dashboard.style.display = 'none';
+            Reminders.style.display = 'none';
+            leaderboards.style.display = 'block';
+            Goals.style.display = 'none';
         }
     });
 });
@@ -50,15 +62,24 @@ function switchpanel(text) {
     if (text === "Dashboard") {
         dashboard.style.display = 'flex';
         Reminders.style.display = 'none';
+        leaderboards.style.display = 'none';
         Goals.style.display = 'none';
-    } else if (text === "Transactions") {
+    } else if (text === "Reminders") {
         dashboard.style.display = 'none';
         Reminders.style.display = 'flex';
+        leaderboards.style.display = 'none';
         Goals.style.display = 'none';
     }
     else if (text === "My Goals") {
         dashboard.style.display = 'none';
         Reminders.style.display = 'none';
+        leaderboards.style.display = 'none';
         Goals.style.display = 'block';
+    }
+    else if (text === "Leaderboard") {
+        dashboard.style.display = 'none';
+        Reminders.style.display = 'none';
+        leaderboards.style.display = 'block';
+        Goals.style.display = 'none';
     }
 }

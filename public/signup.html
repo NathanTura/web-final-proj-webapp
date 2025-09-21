@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Leadger pro - Sign up</title>
-    <link rel="stylesheet" href="css/index.css" />
+    <title>Ledger Pro - Sign In</title>
+    <link rel="stylesheet" href="css/signin.css" />
+    
   </head>
   <body>
     <div class="main">
-      <form action="ledgerpro.free.nf/sign_up.php" method="POST">
+      <form action="ledgerpro.free.nf/sign_in.php" method="POST">
         <h2>Ledger <l> pro </l></h2>
-        <h3>Sign Up</h3>
+        <h3>Sign In</h3>
 
         <div class="input-group">
-          <label for="username">Email</label>
+          <label for="email">Email</label>
           <input
             type="email"
             placeholder="Enter your Email"
@@ -22,53 +23,45 @@
             required
           />
         </div>
-
         <div class="input-group">
-          <label for="passwordtxt">Password</label>
+          <label for="password">Password</label>
           <input
             type="password"
             placeholder="Enter your password"
-            id="passwordtxt"
-            name="passwordtxt"
+            id="password"
+            name="password"
             required
           />
         </div>
-          <div class="input-group">
-          <label for="passwordtxt">Confirm Password</label>
-          <input
-            type="password"
-            placeholder="Confirm your password"
-            id="passwordtxt"
-            
-            required
-          />
-        </div>
-
-
-       
 
         <div class="button-group">
-          <input type="submit" value="signup" />
+          <input type="submit" value="signin" />
+        </div>
+
+        <div class="forgot-group">
+          <a href="forgot_password.html">Forgot Password?</a>
         </div>
 
         <div class="separeter-group">
           <hr />
-          <p>or sign up with</p>
+          <p>or sign in with</p>
           <hr />
         </div>
 
         <div class="link-group">
-          <a href="#"><div class="google"><img src="assets/googlelogo.png" alt="google"><p>Google</p></div></a>
-          <!-- <a href="#"><div class="yahoo"><img src="assets/yahoologo.png" alt="yahoo"><p>Yahoo</p></div></a>
-          <a href="#"><div class="facebook"><img src="assets/facebooklogo.png" alt="facebook"><p>Facebook</p></div></a> -->
+          <a href="#">
+            <div class="google">
+              <img src="assets/googlelogo.png" alt="google" />
+              <p>Google</p>
+            </div>
+          </a>
         </div>
 
         <div class="signup-group">
           <label for="sign-up">
-            Do you have an account? <a href="index.html">Sign in</a></label>
+            Don’t have an account? <a href="signup.html">Sign up</a></label>
         </div>
       </form>
     </div>
-    
   </body>
 </html>

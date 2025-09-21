@@ -48,7 +48,7 @@ progress {
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
-    min-width: 350px;
+
     height: 16px;
     border-radius: 8px;
     overflow: hidden;
@@ -84,6 +84,9 @@ progress::-moz-progress-bar {
 }
 
 .Progresses div input[type="button"] {
+    text-overflow:ellipsis;
+    max-width: 100px;
+    width: 20%;
     background-color: #27ae60;
     color: white;
     font-size: small;
@@ -141,10 +144,7 @@ progress::-moz-progress-bar {
 
 
 @media (max-width:769px) {
-    body {
-        padding-bottom: 230px;
-    }
-
+ 
     .goal-overview {
         display: flex;
         flex-direction: column;
@@ -172,26 +172,7 @@ progress::-moz-progress-bar {
         font-size: 1.1rem;
         font-weight: bold;
     }
-
-    .add-goals {
-        width: 100%;
-        padding: 0;
-    }
-
-    .add-goals {
-        padding: 10px;
-        width: 45%;
-        min-width: 250px;
-    }
-
-    .Progresses div {
-        display: flex;
-        align-items: self-start;
-        flex-direction: column;
-    }
-
-    #goalPercent {
+    .add-goals{
         display: none;
-
     }
 }
