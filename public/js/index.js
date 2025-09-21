@@ -35,7 +35,7 @@ function updateReminderButton() {
   if (window.innerWidth <= 769) {
     button.value = "+";
   } else {
-    button.value = "Set Reminder";
+    button.value = "Contribute";
   }
 }
 
