@@ -4,7 +4,8 @@ include "db.php";
 $action = $_POST['action'] ?? '';
 
 if($action === 'signin'){
-    $login = $_POST['login'] ?? '';
+    $login = $_POST['email'] ?? '';
+
     $password = $_POST['password'] ?? '';
 
     $stmt = $conn->prepare("SELECT * FROM users WHERE EmailAddress = ? OR Username = ?");
