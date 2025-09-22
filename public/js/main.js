@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
    
     const pathParts = window.location.pathname.split("/").filter(p => p);
@@ -7,12 +8,50 @@ document.addEventListener('DOMContentLoaded', () => {
         signin();
     }
     else if (hostname.includes('index')) {
+        logout();
         getuserinfo();
         loadTransactions();
         document.getElementById('addTransaction').addEventListener('click', openTransactionPopup);
     }
 });
+function logout(){
+        document.getElementById('logout').addEventListener('click', (e) => {
+        e.preventDefault();
 
+        const existing = document.getElementById('exitpopup');
+        if (existing) existing.remove();
+
+
+        const popup = document.createElement('div');
+        popup.id = 'exitpopup';
+        popup.classList.add('popup'); 
+
+        popup.innerHTML = `
+            <h3>Log out</h3>
+            <p>Do you want to logout?</p>
+            <div class="popup-buttons">
+                <button id="cancelLogoutBtn">Cancel</button>
+                <button id="confirmLogoutBtn">Logout</button>
+            </div>
+        `;
+
+        document.body.appendChild(popup);
+
+    
+        setTimeout(() => popup.style.right = '20px', 50);
+
+    
+        document.getElementById('cancelLogoutBtn').addEventListener('click', () => {
+            popup.style.right = '-400px';
+            setTimeout(() => popup.remove(), 400);
+        });
+
+        document.getElementById('confirmLogoutBtn').addEventListener('click', () => {
+            localStorage.clear();
+            window.location.href = 'http://localhost:8000/public/signin.html';
+        });
+    });
+}
 function signin() {
     const form = document.getElementById('userform');
     form.addEventListener('submit', async (e) => {
@@ -61,7 +100,8 @@ function signin() {
 }
 
 function getuserinfo() {
-
+    document.getElementById('username').textContent = localStorage.getItem('username');
+    
     console.log(localStorage.getItem('userId'))
     const userId = localStorage.getItem('userId');
     if (!userId) return;
@@ -124,28 +164,26 @@ function loadTransactions() {
 }
 
 
-
 function renderPieChart(transactions) {
     const ctxCanvas = document.getElementById('incomeExpenseChart');
     if (!ctxCanvas) return;
 
     const ctx = ctxCanvas.getContext('2d');
 
-    const incomeTx = transactions.filter(tx => tx.Type === 'income');
-    const expenseTx = transactions.filter(tx => tx.Type === 'expense');
+    const labels = transactions.map(tx => tx.Description || 'No description');
+    const data = transactions.map(tx => parseFloat(tx.Amount));
 
-    const labels = [...incomeTx.map(tx => tx.Description || 'No description'),
-    ...expenseTx.map(tx => tx.Description || 'No description')];
-    const data = [...incomeTx.map(tx => parseFloat(tx.Amount)),
-    ...expenseTx.map(tx => parseFloat(tx.Amount))];
-    const backgroundColor = [
-        ...incomeTx.map(_ => 'rgba(54, 162, 235, 0.7)'),
-        ...expenseTx.map(_ => 'rgba(255, 99, 132, 0.7)')
+    // Default color palette
+    const defaultColors = [
+        '#3366CC', '#DC3912', '#FF9900', '#109618', '#990099', 
+        '#0099C6', '#DD4477', '#66AA00', '#B82E2E', '#316395',
+        '#994499', '#22AA99', '#AAAA11', '#6633CC', '#E67300',
+        '#8B0707', '#329262', '#5574A6', '#3B3EAC'
     ];
-    const borderColor = [
-        ...incomeTx.map(_ => 'rgba(54, 162, 235, 1)'),
-        ...expenseTx.map(_ => 'rgba(255, 99, 132, 1)')
-    ];
+
+ 
+    const backgroundColor = transactions.map((_, i) => defaultColors[i % defaultColors.length] + 'CC');
+    const borderColor = transactions.map((_, i) => defaultColors[i % defaultColors.length]);
 
     if (window.incomeExpenseChart && window.incomeExpenseChart instanceof Chart) {
         window.incomeExpenseChart.destroy();

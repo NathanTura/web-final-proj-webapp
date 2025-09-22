@@ -101,6 +101,7 @@ progress::-moz-progress-bar {
     border-radius: 10px;
     margin: 20px;
     padding: 20px;
+    max-width: 450px;
     width: 45%;
     background-color: #1f2937;
 
