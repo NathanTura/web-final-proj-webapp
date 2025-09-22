@@ -1,5 +1,5 @@
 var dashboard, Reminders, Goals, transactions, leaderboards;
-
+var currentpanel;
 document.addEventListener('DOMContentLoaded', () => {
     dashboard = document.getElementById('dashboard')
     Reminders = document.getElementById('Reminders')
@@ -37,23 +37,31 @@ mobileItems.forEach((item, index) => {
             Reminders.style.display = 'none';
             leaderboards.style.display = 'none';
             Goals.style.display = 'none';
+            currentpanel = "dashboard";
+            main(currentpanel)
         } else if (index === 1) {
             dashboard.style.display = 'none';
             Reminders.style.display = 'flex';
             leaderboards.style.display = 'none';
             Goals.style.display = 'none';
+            currentpanel = "Reminders";
+            main(currentpanel)
         }
         else if (index === 3) {
             dashboard.style.display = 'none';
             Reminders.style.display = 'none';
             leaderboards.style.display = 'none';
             Goals.style.display = 'block';
+            currentpanel = "My Goals";
+            main(currentpanel)
         }
         else if (index === 4) {
             dashboard.style.display = 'none';
             Reminders.style.display = 'none';
             leaderboards.style.display = 'block';
             Goals.style.display = 'none';
+            currentpanel = "leaderboards";
+            main(currentpanel)
         }
     });
 });
@@ -64,22 +72,30 @@ function switchpanel(text) {
         Reminders.style.display = 'none';
         leaderboards.style.display = 'none';
         Goals.style.display = 'none';
+        currentpanel = "dashboard";
+        main(currentpanel)
     } else if (text === "Reminders") {
         dashboard.style.display = 'none';
         Reminders.style.display = 'flex';
         leaderboards.style.display = 'none';
         Goals.style.display = 'none';
+        currentpanel = "Reminders";
+        main(currentpanel)
     }
     else if (text === "My Goals") {
         dashboard.style.display = 'none';
         Reminders.style.display = 'none';
         leaderboards.style.display = 'none';
         Goals.style.display = 'block';
+        currentpanel = "My Goals";
+        main(currentpanel)
     }
     else if (text === "Leaderboard") {
         dashboard.style.display = 'none';
         Reminders.style.display = 'none';
         leaderboards.style.display = 'block';
         Goals.style.display = 'none';
+        currentpanel = "Leaderboard";
+        main(currentpanel)
     }
 }

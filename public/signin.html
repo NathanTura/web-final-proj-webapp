@@ -9,18 +9,18 @@
   </head>
   <body>
     <div class="main">
-      <form action="ledgerpro.free.nf/sign_in.php" method="POST">
+      <form id="userform">
         <h2>Ledger <l> pro </l></h2>
         <h3>Sign In</h3>
 
         <div class="input-group">
-          <label for="email">Email</label>
+          <label for="email">Email or Username</label>
           <input
-            type="email"
-            placeholder="Enter your Email"
+            type="text"
+            placeholder="Enter your Email or Username"
             id="email"
             name="email"
-            required
+            
           />
         </div>
         <div class="input-group">
@@ -30,7 +30,7 @@
             placeholder="Enter your password"
             id="password"
             name="password"
-            required
+            
           />
         </div>
 
@@ -50,10 +50,8 @@
 
         <div class="link-group">
           <a href="#">
-            <div class="google">
               <img src="assets/googlelogo.png" alt="google" />
               <p>Google</p>
-            </div>
           </a>
         </div>
 
@@ -65,3 +63,7 @@
     </div>
   </body>
 </html>
+
+
+<script src="js/popup.js"></script>
+<script src="js/main.js"></script>

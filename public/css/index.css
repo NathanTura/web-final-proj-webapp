@@ -58,7 +58,7 @@ body {
 
 @media (max-width: 769px) {
 
-    
+
 
     .sidepanel {
         display: block;
@@ -83,10 +83,9 @@ body {
         bottom: 0;
         left: 0;
         width: 100%;
-        padding: 10px 0;
         background-color: #1f2937;
         box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
-        z-index: 300;
+        z-index: 100;
         transform: translateY(200%);
     }
 
@@ -132,6 +131,111 @@ body {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 }
+
+.popup {
+    position: fixed;
+    top: 10%;
+    right: -300px;
+    min-width: fit-content;
+    padding: 10px;
+    z-index: 1000;
+    background-color: #ffffff;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    border-left: solid 3px;
+    transition: all 0.5s ease;
+}
+
+#transactionPopup {
+    position: fixed;
+    top: 50px;
+    right: -400px;
+    width: 360px;
+    background-color: #1e293b;
+    color: #f3f4f6;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: right 0.4s ease;
+    z-index: 1000;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#transactionPopup h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+#transactionPopup .popup-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 12px;
+}
+
+#transactionPopup label {
+    font-weight: 500;
+}
+
+#transactionPopup input
+{
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: #0f172a;
+    color: #f3f4f6;
+    width: 95%;
+}
+
+#transactionPopup select {
+ padding: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: #0f172a;
+    color: #f3f4f6;
+    width: 100%;
+}
+
+#transactionPopup .popup-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#transactionPopup .popup-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+#transactionPopup .popup-buttons #cancelTransBtn {
+    background: #ef4444;
+    color: white;
+}
+
+#transactionPopup .popup-buttons #cancelTransBtn:hover {
+    background: #dc2626;
+}
+
+#transactionPopup .popup-buttons #addTransBtn {
+    background: #10b981;
+    color: white;
+}
+
+#transactionPopup .popup-buttons #addTransBtn:hover {
+    background: #059669;
+}
+
 
 
 @media (max-width: 500px) {
