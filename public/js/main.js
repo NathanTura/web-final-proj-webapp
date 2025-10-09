@@ -87,7 +87,7 @@ function signin() {
 
                 createpopup(data.status, data.message);
                 setTimeout(() => {
-                    window.location.href = 'http://localhost:8000/public/index.html';
+                    window.location.href = 'http://localhost:8000/public/dashboard.html';
                 }, 2000);
             } else {
                 createpopup(data.message, data.message);
