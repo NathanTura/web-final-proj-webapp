@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ledger Pro - Sign In</title>
     <link rel="stylesheet" href="css/signin.css" />
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script type="module" src="../src/api/auth.js"></script>
+
     
   </head>
   <body>
@@ -48,12 +51,14 @@
           <hr />
         </div>
 
-        <div class="link-group">
-          <a href="#">
-              <img src="assets/googlelogo.png" alt="google" />
-              <p>Google</p>
-          </a>
-        </div>
+        <div id="g_id_onload"
+     data-client_id="1234567890-abcdef.apps.googleusercontent.com"
+     data-callback="handleGoogleSignIn">
+</div>
+<div class="g_id_signin link-group" data-type="standard">
+   
+</div>
+
 
         <div class="signup-group">
           <label for="sign-up">
