@@ -3,7 +3,7 @@ async function handleGoogleSignIn(response) {
   console.log("Google ID Token:", idToken);
 
   try {
-    const res = await fetch("https://ledgerpro-php.onrender.com/api/auth/login.php", {
+    const res = await fetch("https://ledgerpro-php.onrender.com/public/api/auth/login.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
