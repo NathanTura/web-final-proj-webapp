@@ -14,7 +14,8 @@ async function handleGoogleSignIn(response) {
     const data = await res.json();
     if (res.ok) {
       console.log("✅ Signed in:", data);
-      alert(`Welcome, ${data.user.name}!`);
+      alert(`Welcome, ${data.name}!`);
+       window.location.href = "../public/dashboard.html";
     } else {
       console.error("❌ Sign-in failed:", data.error);
     }
