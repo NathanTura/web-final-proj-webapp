@@ -1,0 +1,77 @@
+.transactions-page {
+  padding: 20px;
+  color: #fff;
+}
+
+.transactions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.transactions-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.transactions-actions input,
+.transactions-actions select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.transactions-actions button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.transactions-actions button:hover {
+  background-color: #45a049;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.transactions-table th, .transactions-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+.transactions-table th {
+  background: #2d2d2d;
+  color: #ccc;
+}
+
+.transactions-table tr:hover {
+  background: #292929;
+}
+
+.edit-btn {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #1976d2;
+}

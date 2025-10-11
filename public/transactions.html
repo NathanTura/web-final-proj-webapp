@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +8,10 @@
   <title>LedgerPro Dashboard</title>
 
   <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="stylesheet" href="./css/dashboard.css" />
+
   <link rel="stylesheet" href="./css/transaction.css">
+  <link rel="stylesheet" href="./css/dashboard.css">
+ 
 
 
 </head>
@@ -41,12 +45,11 @@
         </button>
         </a>
     
-        <a href="./settings.html">
+        
         <button class="menu-item" data-page="settings">
           <i data-lucide="settings"></i>
           <span>Settings</span>
         </button>
-        </a>
       </nav>
 
       
@@ -68,50 +71,23 @@
       </header>
 
       <section id="content-area">
-        <div class="home-dashboard">
-  <h2>Dashboard Overview</h2>
-
-  <!-- Summary Panels -->
-  <div class="summary-grid">
-    <div class="summary-card">
-      <h3>Total Balance</h3>
-      <p class="amount" id="balance">ETB 12,450</p>
-    </div>
-    <div class="summary-card">
-      <h3>Total Income</h3>
-      <p class="amount" id="income">ETB 18,200</p>
-    </div>
-    <div class="summary-card">
-      <h3>Total Expenses</h3>
-      <p class="amount" id="expenses">ETB 5,750</p>
-    </div>
-  </div>
-
-  <!-- Charts -->
-  <div class="charts-grid">
-    <div class="chart-card">
-      <h3>Monthly Income vs Expense</h3>
-      <canvas id="barChart"></canvas>
-    </div>
-
-    <div class="chart-card">
-      <h3>Expense Breakdown</h3>
-      <canvas id="salesChart"></canvas>
-    </div>
-  </div>
-</div>
+      
       </section>
     </main>
   </div>
 
 
 
-
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
 
   
 </body>
 </html>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="./js/dashboard.js"></script>
-     
+
+
+
+
+
+
+<script src="../js/pages/transaction.js"></script> 
