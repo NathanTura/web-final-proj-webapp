@@ -1,0 +1,65 @@
+.Reminders {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+    background: #111827;
+    transition: all 0.3s ease;
+    gap: 20px;
+    width: 100%;
+}
+
+.reminder {
+
+    padding: 20px 20px;
+    padding-left: 20px;
+    width: fit-content;
+    height: fit-content;
+    background-color: #1f2937;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+
+}
+
+
+.reminder input[type="text"],
+.reminder input[type="number"] {
+    min-width: 30%;
+    margin: 5px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: small;
+    outline: none;
+    border: 1px solid;
+}
+
+.reminder input[type="button"] {
+
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #2ecc71;
+    color: white;
+    outline: none;
+    border: 0px solid;
+}
+
+
+.history {
+    width: 40%;
+    min-width: fit-content;
+    height: fit-content;
+    background-color: #1f2937;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+
+@media (max-width : 769px) {
+    .reminder {
+        flex-wrap: wrap;
+    }
+
+}
