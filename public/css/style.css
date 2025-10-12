@@ -1,0 +1,644 @@
+body {
+    display: block;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --accent-color: #00a383;
+    --menu-bg: #ffffff;
+    --card-bg: #ffffff;
+}
+
+body[data-theme="dark"] {
+    --bg-color: #1a1a2e;
+    --text-color: #f5f5f5;
+    --accent-color: #216457;
+    --menu-bg: #16213e;
+    --card-bg: #1f1f2e;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7%;
+    flex-wrap: wrap;
+    padding: .6rem 0rem;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--menu-bg);
+    z-index: 100;
+}
+
+.mode-slider {
+    width: 50px;
+    height: 24px;
+    background: var(--menu-bg);
+    border-radius: 20px;
+    border: solid 1px;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.slider-circle {
+    width: 20px;
+    height: 20px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+}
+
+.slider-circle.active {
+    left: 28px;
+}
+
+.menu-slider {
+    display: none;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.logo .highlight {
+    color: var(--accent-color);
+}
+
+.menu ul {
+    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.menu li {
+    font-size: 1.2rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 1s ease;
+}
+
+.menu a:hover {
+    color: var(--accent-color);
+}
+
+.menu a:active {
+    color: var(--accent-color);
+}
+
+.menu hr {
+    margin: auto;
+    height: 109%;
+    width: 1px;
+    background-color: var(--text-color);
+    border: none;
+}
+
+.menu .signup {
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.menu .signup:hover {
+    transform: scale(1.1);
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+
+.menu img{
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    border: solid 1px green;
+    transition: all .4s ease;
+}
+
+.menu img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.menu p{
+    padding: auto;
+    margin: auto;
+    margin-left: 3rem;
+    font-weight: 600;
+}
+
+#profileDropdown {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+#profileDropdown.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#profileDropdown a {
+    text-decoration: none;
+   
+    padding: 10px 15px;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: all 0.5s ease;
+}
+
+#profileDropdown a:hover { 
+    cursor: pointer;
+    transform: translateX(3px);    
+    border-left: var(--accent-color) solid 1px;
+}
+
+
+.main {
+    display: flex;
+    background-color: var(--accent-color);
+    transition: all .5s ease;
+}
+
+.slogan {
+    margin-top: 5%;
+    width: 50%;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.slogan .sl1 {
+    font-size: 2rem;
+    font-weight: lighter;
+    color: white;
+    text-align: center;
+    transition: color .5s ease;
+}
+
+.slogan .sl2 {
+    font-weight: normal;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+        transition: color .5s ease;
+}
+
+.slogan button {
+    display: flex;
+    margin: auto;
+    margin-bottom: 10%;
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #067c64;
+    color: white;
+    transition: color .5s ease;
+}
+
+.slogan button:hover {
+    background-color: rgba(0, 0, 0, .5);
+    cursor: pointer;
+    transform: translateY(-2px);
+    transition: transform .4s ease, background-color 1s ease;
+}
+
+.slogan a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.image-group {
+    position: relative;
+    width: 50%;
+    overflow: visible;
+}
+
+.image-group .phone1 {
+    position: absolute;
+    top: 54%;
+    width: 15%;
+    transform: rotateZ(-8deg);
+    left: -100%;
+    opacity: 0;
+    z-index: 1;
+    transition: all .3s ease;
+}
+
+.phone1:hover {
+    transform: scale(1.3) rotateZ(0deg);
+    cursor: pointer;
+}
+
+.image-group .phone2 {
+    position: absolute;
+    opacity: 0;
+    left: 100%;
+    width: 15%;
+    transform: rotateZ(8deg);
+    top: 59%;
+    transition: all .3s ease;
+}
+
+.phone2:hover {
+    transform: scale(1.3) rotateZ(0deg);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.image-group .laptop {
+    position: absolute;
+    top: 59vh;
+    opacity: 0;
+    width: 60%;
+    transition: all .3s ease;
+}
+
+.laptop:hover {
+    transform: translateY(-2em) scale(1.1);
+    cursor: pointer;
+}
+
+body:has(.laptop:hover) .phone1 {
+    transform: rotateZ(-15deg) translateX(-5em);
+}
+
+body:has(.laptop:hover) .phone2 {
+    transform: rotateZ(15deg) translateX(3em);
+    transition: transform .5s ease;
+}
+
+.article {
+    transform: translateY(100vh);
+    margin: 8% auto;
+    text-align: center;
+    padding: 2rem;
+    transition: all .3s ease;
+}
+
+.discription {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.discription section {
+    flex: 1;
+    min-width: 280px;
+    max-width: 32%;
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .1);
+    transition: transform 0.3s ease;
+    color: var(--text-color);
+}
+
+.discription section:hover {
+    transform: scale(1.05);
+}
+
+.discription svg {
+    position: relative;
+    z-index: 0;
+    top: -30%;
+    right: 30%;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+section p {
+    position: relative;
+    top: -20%;
+    font-size: 1.12rem;
+    padding: 0.5rem;
+    color: var(--text-color);
+    transition: color 0.5s ease;
+}
+
+.setup-guide{
+    transform: translateY(100vh);
+    transition: all .3s ease;
+}
+
+body:has(.setup-guide:hover) .setup-guide h2 {
+    box-shadow: 0px 3px;
+}
+
+.setup-guide h2 {
+    margin-top: -5%;
+    padding: 20px;
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    transition: box-shadow 1s ease;
+}
+
+.setup-guide em {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.setup-guide h4 {
+    color: var(--accent-color);
+}
+
+.Create-container,
+.Automate-container,
+.Manage-Container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.info {
+    padding: 20px;
+}
+
+.video-container {
+    width: 20%;
+    position: relative;
+}
+
+img,
+video {
+    position: absolute;
+    width: 100%;
+    transition: transform .3s ease, opacity .3s ease;
+}
+
+img {
+    opacity: 1;
+}
+
+video {
+    opacity: 0;
+}
+
+body:has(.Create-container:hover) .create-video {
+    transform: translateX(-10%);
+    opacity: 1;
+    z-index: 2;
+}
+
+body:has(.Create-container:hover) .create-image {
+    opacity: 0;
+}
+
+body:has(.Automate-container:hover) .install-video {
+    transform: translateY(10%);
+    opacity: 1;
+    z-index: 2;
+}
+
+body:has(.Automate-container:hover) .install-image {
+    opacity: 0;
+}
+
+body:has(.Manage-Container:hover) .finances-video {
+    transform: translateY(-5%);
+    opacity: 1;
+    z-index: 2;
+}
+
+body:has(.Manage-Container:hover) .finances-image {
+    opacity: 0;
+}
+
+.popup {
+    position: fixed;
+    top: 10%;
+    right: -300px; 
+    min-width: fit-content;
+    padding: 10px;
+    z-index: 1000;
+    background-color: #ffffff;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    border-left: solid 3px;
+    transition: all 0.5s ease;
+}
+
+@media(max-width:1000px) {
+    .main
+    {
+        margin-top: 10%;
+    }
+}
+
+    @media(max-width:769px) {
+    .main {
+        display: grid;
+        grid-template-areas:
+            "image"
+            "slogan";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        justify-items: center;
+        align-items: center;
+        padding: 2rem 1rem;
+        gap: 2rem;
+        background-color: var(--accent-color);
+    }
+
+    .menu {
+        padding: .8rem 0rem;
+        display: flex;
+    }
+
+    .logo {
+        display: flex;
+        margin: auto;
+    }
+
+    .menu ul {
+        display: none;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 20px;
+        font-size: .8rem;
+    }
+
+    .menu hr {
+        margin: auto;
+        height: 90%;
+        width: 1px;
+        background-color: var(--text-color);
+        border: none;
+    }
+
+    .menu-slider {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 25px;
+        left: 4%;
+        z-index: 1000;
+    }
+
+    .menu-slider button {
+        width: 2.1rem;
+        border: none;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-slider img {
+        background-color: var(--accent-color);
+        border-radius: 10%;
+        padding: 10%;
+        width: 80%;
+        transition: background-color .5s ease, transform .5s ease;
+    }
+
+    .menu-slider img:hover {
+        background-color: #027760;
+        transform: translateY(1px);
+        cursor: pointer;
+    }
+
+    .menu-slider img:active {
+        background-color: cyan;
+    }
+
+    .slogan {
+        grid-area: slogan;
+        width: 100%;
+        text-align: center;
+    }
+
+    .slogan .sl1 {
+        font-size: 1.3rem;
+    }
+
+    .slogan .sl2 {
+        font-size: 1.1rem;
+    }
+
+    .slogan button {
+        padding: 15px 25px;
+        font-size: 1rem;
+    }
+
+    .image-group {
+        grid-area: image;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 1rem;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .image-group img {
+        position: relative !important;
+        top: 51px !important;
+        left: auto !important;
+        transform: none !important;
+    }
+
+    .laptop {
+        width: 55%;
+        z-index: 2;
+        transform: none !important;
+    }
+
+    .phone1,
+    .phone2 {
+        width: 20%;
+        max-width: 120px;
+        z-index: 1;
+    }
+
+    .phone1 {
+        transform: rotate(-15deg);
+    }
+
+    .phone2 {
+        transform: rotate(15deg);
+    }
+
+    .discription {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .discription section {
+        max-width: 50%;
+    }
+
+    section p {
+        font-size: 1.0rem;
+    }
+
+    .setup-guide {
+        display: grid;
+        grid-template-areas: 'info' 'create' 'autoM' 'manage';
+    }
+
+    .setup-guide h2 {
+        font-size: 1.4rem;
+        grid-area: info;
+    }
+
+    .Create-container {
+        display: flex;
+        flex-direction: column;
+        grid-area: create;
+    }
+
+    .Automate-container {
+        grid-area: autoM;
+    }
+
+    .Manage-Container {
+        grid-area: manage;
+    }
+
+    .setup-guide img,
+    video {
+        display: none;
+    }
+}

@@ -1,0 +1,67 @@
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #00a383;
+    --card-bg-color: #ffffff;
+    --logo-pro-color: #000000;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --primary-color: #00e0b8;
+    --card-bg-color: #1e1e1e;
+    --logo-pro-color: #ffffff;
+}
+
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.menu {
+    background-color: var(--bg-color);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.4s ease;
+}
+
+body.dark-mode .menu {
+    box-shadow: 0px 3px 3px rgba(255, 255, 255, 0.1);
+}
+
+.logo a {
+    color: var(--logo-pro-color);
+}
+
+.menu a {
+    color: var(--text-color);
+}
+
+.discription section {
+    background-color: var(--card-bg-color);
+}
+
+section p {
+    color: var(--text-color);
+}
+
+.setup-guide h2, .setup-guide h4 {
+    color: var(--primary-color);
+}
+
+
+.mode-slider {
+    border-color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.slider-circle {
+    background-color: var(--primary-color);
+}
+
+body.dark-mode .slider-circle {
+    transform: translateX(31px);
+}

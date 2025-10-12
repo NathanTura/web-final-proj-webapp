@@ -1,0 +1,228 @@
+body {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
+    min-height: 100vh;       /* ensure body fills the viewport */
+    margin: 0;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.nav-container{
+    padding: 20px 10px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0px 0px 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: color .2s ease;
+}
+
+.nav-container .highlight {
+    color: #00a383;
+}
+
+.nav-container a:hover{
+    color: #00a383;
+}
+
+.center
+{
+    display: flex;
+    justify-content: center;
+}
+
+.main-container{
+    box-shadow: 0px 0px 4px ;
+    /* border: solid red 10px; */
+    border-radius: 5px;
+    padding: 30px 20px;
+    margin-top: 20%;
+    transition: all .5s ease;
+}
+
+.header{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.header em{
+    color: #00a383;
+    font-size: 1.3rem;
+}
+
+.input-group{
+    margin-bottom:5%;
+}
+
+.input-group label{
+    font-size: 1.1rem;
+    opacity: .9;
+}
+
+.input-group input[type='email'] ,
+.input-group input[type='password'],
+.input-group input[type = 'text']{
+    width: 97%;
+    margin-top: 1%;
+    border: 0.5px solid;
+    border-radius: 5px;
+    padding: 5px 5px;
+    font-size: 1rem;
+    transition: border-color .5s ease , box-shadow .4s ease;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.input-group input:focus {
+    border-color: #00a383;
+    outline: none;
+    box-shadow: 0px 5px 1px #00a383;
+}
+
+
+.button-group{
+    margin: auto;
+    margin-top: 1%;
+    width: 90%;
+}
+
+.button-group input {
+    width: 100%;
+    border: 1px solid;
+    padding: 12px;
+    background-color: #00a383;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    transition: transform .4s ease;
+}
+
+.button-group input:hover {
+    transform: translateY(10%);
+    cursor: pointer;
+}
+
+.separeter-group{
+    display: flex;
+    position: relative;
+    gap: 2%;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.separeter-group hr{
+    width: 170px;
+    border: 1px black solid;
+    opacity: .6;
+}
+
+.link-group {
+    display:grid;
+    gap: 10px;
+    width: 90%;
+    margin: auto;
+}
+
+.link-group button{
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform .5s ease;
+    font-weight: bold;
+}
+
+.link-group .google{
+    border: none;
+    background-color: lightcoral;
+}
+
+.link-group .facebook{
+    border: none;
+    background-color: lightblue;
+}
+
+.link-group .apple{
+    border: none;
+}
+
+
+body:has(.google:hover) .facebook{
+     transform: translateY(10%) scale(.9);
+}
+body:has(.google:hover) .apple{
+     transform: translateY(10%) scale(.8);
+}
+
+body:has(.facebook:hover) .google{
+     transform: translateY(-10%) scale(.9);
+}
+
+body:has(.facebook:hover) .apple{
+     transform: translateY(10%) scale(.9);
+}
+
+body:has(.apple:hover) .facebook{
+    transform: translateY(-10%)  scale(.9);
+}
+body:has(.apple:hover) .google{
+    transform: translateY(-10%)  scale(.8);
+}
+
+.already{
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+.already p{
+    font-size: 1.1rem;
+    opacity: .9;
+}
+
+.already a{
+    text-decoration: none;
+    color: #00a383;
+    transition: all .5s ease;
+}
+
+.already a:hover{
+    color: #0f746b;
+    text-decoration:underline ;
+}
+
+.already a:active{
+    color: #1ab697;
+}
+
+.popup {
+    position: fixed;
+    top: 10%;
+    right: -300px; 
+    min-width: fit-content;
+    padding: 10px;
+    z-index: 1000;
+    background-color: #ffffff;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    border-left: solid 3px;
+    transition: right 0.5s ease-in-out;
+}

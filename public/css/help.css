@@ -1,0 +1,183 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem 3rem;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);    
+    top: 0;            
+    left: 0;
+    background-color: white; 
+    z-index: 10;
+}
+
+.logo {
+    margin: auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo a {
+     
+    text-decoration: none;
+    color: white;
+}
+
+.logo .highlight {
+  
+    color: #00a383;
+}
+
+.popup {
+    position: fixed;
+    top: 10%;
+    right: -300px; 
+    min-width: fit-content;
+    padding: 10px;
+    z-index: 1000;
+    background-color: #ffffff;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    border-left: solid 3px;
+    transition: right 0.5s ease-in-out;
+}
+
+.menu ul {
+    gap: 30px;
+    display: flex;
+    margin: auto;
+    list-style-type: none;
+}
+
+.menu li {
+    font-size: 1.2rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    transition: color 1s ease;
+}
+
+.menu a:hover {
+    color: #00a383;
+}
+
+.menu a:active {
+    color: #76f3da;
+}
+
+.menu hr {
+    margin: auto;
+    height: 109%;
+    width: 1px;
+    background-color: black;
+    border: none;
+}
+
+.menu .signup {
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu .signup:hover {
+    transform: scale(1.1);
+    background-color: #00a383;
+    color: white;
+}
+
+
+.sec1 {
+    padding: 4% 10%;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.head-group h3 {
+    font-size: 2rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.head-group h2 {
+    font-size: 1.5rem;
+    color: #00a383;
+    margin-bottom: 1rem;
+}
+
+.sec2 {
+    margin: 4% auto;
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.textbox-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textbox-group textarea {
+    width: 100%;
+    height: 180px;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+}
+
+.button-group {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-group button {
+    padding: 10px 39px;
+    font-size: 1rem;
+    background-color: #00a383;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+    transform: translateY(2px);
+    background-color: #009e75;
+}
+
+.sec3 {
+    background-color: #eaeaea;
+    padding: 3rem 10%;
+    text-align: center;
+}
+
+.support-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #00a383;
+}
+
+.support-info ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.support-info li {
+    margin: 0.5rem 0;
+}
+
+.support-info a {
+    color: #00a383;
+    text-decoration: none;
+}
+
+.support-info a:hover {
+    text-decoration: underline;
+}
+
