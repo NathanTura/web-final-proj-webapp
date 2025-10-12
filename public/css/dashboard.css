@@ -53,7 +53,6 @@
     gap: 20px;
 }
 
-
 .section2 h4 {
     font-size: large;
     color: #2ecc71;
@@ -62,7 +61,6 @@
 .section2 p {
     font-weight: bold;
 }
-
 
 .totalB,
 .totalI,
@@ -99,13 +97,6 @@
      max-width: fit-content;
     min-width: 60%;
 }
-
-
-.mobilepanel {
-    display: none;
-    transition: transform 0.3s ease;
-}
-
 
 .recents {
     background-color: #1e293b;
@@ -158,6 +149,7 @@
 
     .dashboard {
         gap: 10px;
+        padding-bottom: 30%;
     }
 
     .section1 input[type="button"] {
@@ -175,7 +167,6 @@
         min-width: 25%;
     }
 
-
     .section3 {
         display: flex;
         flex-direction: column;
@@ -184,8 +175,6 @@
         gap: 10px;
         height: auto;
     }
-
-
 
 }
 

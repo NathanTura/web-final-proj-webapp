@@ -63,13 +63,15 @@ body {
 
 .main {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 
 .sidepanel {
     width: 20%;
+    /* min-height: 100vh; */
     max-width: 220px;
+    
     background: #1f2937;
     color: #fff;
     display: flex;
@@ -134,7 +136,7 @@ body {
     }
 
     .mobilepanel {
-        display: block;
+   
         position: fixed;
         bottom: 0;
         left: 0;
@@ -293,7 +295,12 @@ body {
     background: #059669;
 }
 
-
+@media (max-width: 769px) {
+    #transactionPopup{
+        max-width: 70%;
+        margin-right: 3%;
+    }
+}
 
 @media (max-width: 500px) {
     .mobilepanel li {

@@ -15,21 +15,26 @@
 
 .totalp {
     background-color: rgb(38, 77, 150);
+    min-height: fit-content;
+    overflow: hidden;
 }
 
 .compp {
     background-color: rgb(22, 129, 22);
+    min-height: fit-content;
+    overflow: hidden;
 }
 
 .activep {
     background-color: rgb(129, 79, 22);
+    min-height: fit-content;
+    overflow: hidden;
 }
 
 .goal-overview div {
     width: fit-content;
     height: fit-content;
     min-width: 30%;
-
     border-radius: 10px;
     text-align: center;
 }
@@ -40,7 +45,8 @@
 }
 
 .current-goal-proggress {
-    margin: 20px;
+    /* margin: 20px; */
+    min-width: 50%;
 }
 
 
@@ -103,8 +109,17 @@ progress::-moz-progress-bar {
     padding: 20px;
     max-width: 450px;
     width: 45%;
+    height: fit-content;
     background-color: #1f2937;
 
+}
+
+.flex
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
 }
 
 .input {
@@ -114,7 +129,12 @@ progress::-moz-progress-bar {
 
 }
 
-.input input[type="text"] {
+.container li{
+
+    padding-bottom: 10px;
+    list-style: none;
+}
+.input input[type="text"] , .input input[type="number"] {
     margin-top: 2%;
     padding: 10px;
     border-radius: 5px;
@@ -126,7 +146,6 @@ progress::-moz-progress-bar {
 
 .button-group {
     display: flex;
-    margin: 20px 10px;
     justify-content: center;
 }
 
@@ -147,8 +166,8 @@ progress::-moz-progress-bar {
 @media (max-width:769px) {
  
     .goal-overview {
-        display: flex;
-        flex-direction: column;
+        /* display: flex; */
+        /* flex-direction: column; */
         gap: 15px;
         padding: 0px 20px;
     }
@@ -156,8 +175,20 @@ progress::-moz-progress-bar {
     .goal-overview div {
         line-height: 0%;
         margin: auto;
-        height: 10vh;
+        min-height: 10vh;
         width: 100%;
+    }
+
+    .flex
+    {
+        flex-direction: column;
+        padding-bottom: 30%;
+    }
+
+    .current-goal-proggress
+    {
+        width:80%;
+        margin: auto;
     }
 
     .Goals h3 {
@@ -174,6 +205,9 @@ progress::-moz-progress-bar {
         font-weight: bold;
     }
     .add-goals{
-        display: none;
+        padding: 10px;
+        margin: auto;
+        width: 90%;
+       
     }
 }
